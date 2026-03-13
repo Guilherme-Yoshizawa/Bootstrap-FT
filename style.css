@@ -1,0 +1,18 @@
+body {
+    padding-top: 70px;
+    position: relative;
+}
+
+.secao-painel {
+    padding-top: 80px;
+    margin-top: -80px;
+    min-height: 50vh;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
