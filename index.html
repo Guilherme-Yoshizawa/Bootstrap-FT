@@ -1,0 +1,323 @@
+<!-- Navbar Fixa no Topo -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark navbar-fueltech fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home-section">FuelTech Academy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home-section">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#courses-section">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-section">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-light ms-lg-3" data-bs-toggle="modal" data-bs-target="#addCourseModal">
+                        Adicionar Curso
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-start offcanvas-fueltech" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegação</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home-section" data-bs-dismiss="offcanvas">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#courses-section" data-bs-dismiss="offcanvas">Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-section" data-bs-dismiss="offcanvas">Sobre</a>
+            </li>
+            <li class="nav-item mt-3">
+                <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#addCourseModal" data-bs-dismiss="offcanvas">
+                    Adicionar Curso
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal Adicionar Curso -->
+<div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="addCourseModalLabel">Adicionar Novo Curso</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="courseTitle" class="form-label">Título do Curso</label>
+                        <input type="text" class="form-control" id="courseTitle" placeholder="Ex: Injeção Programável Básica">
+                    </div>
+                    <div class="mb-3">
+                        <label for="courseCategory" class="form-label">Categoria</label>
+                        <select class="form-select" id="courseCategory">
+                            <option selected>Selecione...</option>
+                            <option value="iniciante">Iniciante</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="courseDescription" class="form-label">Descrição Curta</label>
+                        <textarea class="form-control" id="courseDescription" rows="3" placeholder="Breve descrição do curso..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="coursePrice" class="form-label">Preço</label>
+                        <div class="input-group">
+                            <span class="input-group-text">R$</span>
+                            <input type="text" class="form-control" id="coursePrice" placeholder="999,00">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Salvar Curso</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Conteúdo Principal -->
+<main>
+    <!-- Seção Início com Carousel -->
+    <section id="home-section" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Destaques da FuelTech Academy</h2>
+            <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#courseCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active bg-blue">
+                        <div class="d-block w-100 text-center p-5">
+                            <h3>Curso de Injeção Programável FT450</h3>
+                            <p>Domine a configuração e acerto da FT450.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-red">
+                        <div class="d-block w-100 text-center p-5">
+                            <h3>Acerto de Motores Turbo com FuelTech</h3>
+                            <p>Técnicas avançadas para alta performance.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item bg-blue">
+                        <div class="d-block w-100 text-center p-5">
+                            <h3>Eletrônica Automotiva para Preparadores</h3>
+                            <p>Entenda os fundamentos para otimizar seu trabalho.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Cursos -->
+    <section id="courses-section" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-4">Nossos Cursos</h2>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <!-- Dropdown para Filtrar Cursos -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filtrar por Categoria
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Todos</a></li>
+                        <li><a class="dropdown-item" href="#">Iniciante</a></li>
+                        <li><a class="dropdown-item" href="#">Intermediário</a></li>
+                        <li><a class="dropdown-item" href="#">Avançado</a></li>
+                    </ul>
+                </div>
+
+                <!-- Barra de Progresso -->
+                <div class="w-50 ms-3">
+                    <p class="mb-1">Cursos Cadastrados: 75%</p>
+                    <div class="progress progress-fueltech" role="progressbar" aria-label="Cursos Cadastrados" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerta Simples -->
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <p style="margin: 0;"><strong>Informação:</strong> Explore nossos cursos e aprimore suas habilidades em injeção programável!</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- Spinner de Carregamento (simulado) -->
+            <div class="text-center my-4">
+                <p>Carregando cursos...</p>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Carregando...</span>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Card de Curso 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x180/0d6efd/FFFFFF?text=FT+450" class="card-img-top" alt="Curso FT450">
+                        <div class="card-body">
+                            <h5 class="card-title">Injeção Programável FT450</h5>
+                            <p class="card-text">Aprenda a instalar, configurar e realizar o acerto básico da FuelTech FT450.</p>
+                            <p class="card-text"><small class="text-muted">Categoria: Iniciante</small></p>
+                            <p class="card-text"><strong>R$ 899,00</strong></p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCourse1" aria-expanded="false" aria-controls="collapseCourse1">
+                                Detalhes
+                            </button>
+                            <div class="collapse mt-2" id="collapseCourse1">
+                                <div class="card card-body bg-light">
+                                    Este curso abrange desde a instalação física da FT450 até os primeiros passos de configuração e acerto de um motor aspirado. Ideal para quem está começando no mundo da injeção programável.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Curso 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x180/dc3545/FFFFFF?text=Acerto+Turbo" class="card-img-top" alt="Curso Acerto Turbo">
+                        <div class="card-body">
+                            <h5 class="card-title">Acerto Avançado de Motores Turbo</h5>
+                            <p class="card-text">Técnicas e estratégias para otimizar o desempenho de motores turbo com FuelTech.</p>
+                            <p class="card-text"><small class="text-muted">Categoria: Avançado</small></p>
+                            <p class="card-text"><strong>R$ 1.499,00</strong></p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCourse2" aria-expanded="false" aria-controls="collapseCourse2">
+                                Detalhes
+                            </button>
+                            <div class="collapse mt-2" id="collapseCourse2">
+                                <div class="card card-body bg-light">
+                                    Aprofunde-se em mapas de injeção e ignição, controle de boost, estratégias de largada e muito mais para extrair o máximo de motores turbinados.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Curso 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x180/0d6efd/FFFFFF?text=FT+Manager" class="card-img-top" alt="Curso FT Manager">
+                        <div class="card-body">
+                            <h5 class="card-title">Dominando o Software FTManager</h5>
+                            <p class="card-text">Guia completo sobre todas as funcionalidades do software FTManager para FuelTech.</p>
+                            <p class="card-text"><small class="text-muted">Categoria: Intermediário</small></p>
+                            <p class="card-text"><strong>R$ 599,00</strong></p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCourse3" aria-expanded="false" aria-controls="collapseCourse3">
+                                Detalhes
+                            </button>
+                            <div class="collapse mt-2" id="collapseCourse3">
+                                <div class="card card-body bg-light">
+                                    Explore cada menu, função e atalho do FTManager para realizar diagnósticos, ajustes e atualizações de forma eficiente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Curso 4 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x180/dc3545/FFFFFF?text=Sensores+e+Atuadores" class="card-img-top" alt="Curso Sensores">
+                        <div class="card-body">
+                            <h5 class="card-title">Sensores e Atuadores em Injeção</h5>
+                            <p class="card-text">Entenda o funcionamento e a importância de cada sensor e atuador no sistema de injeção.</p>
+                            <p class="card-text"><small class="text-muted">Categoria: Iniciante</small></p>
+                            <p class="card-text"><strong>R$ 749,00</strong></p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCourse4" aria-expanded="false" aria-controls="collapseCourse4">
+                                Detalhes
+                            </button>
+                            <div class="collapse mt-2" id="collapseCourse4">
+                                <div class="card card-body bg-light">
+                                    Conheça os principais sensores (TPS, MAP, IAT, ECT, O2) e atuadores (bicos, bobinas, corpo de borboleta eletrônico) e como eles interagem com a ECU.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paginação -->
+            <nav aria-label="Navegação de Cursos" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próximo</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about-section" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre a FuelTech Academy</h2>
+            <p class="lead text-center">
+                A FuelTech Academy é o seu portal para o conhecimento em injeção programável. Oferecemos cursos de alta qualidade, desenvolvidos por especialistas, para que você domine a tecnologia FuelTech e leve seus projetos automotivos ao próximo nível.
+            </p>
+            <p class="text-center mt-4">
+                Nosso objetivo é capacitar entusiastas e profissionais, fornecendo as ferramentas e o conhecimento necessários para o acerto perfeito.
+            </p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; 2026 FuelTech Academy. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    // Ativar Popovers (exemplo, você pode adicionar a botões ou ícones)
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+
+    // Exemplo de Popover em um botão (adicionar ao HTML se desejar)
+    // <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Dica Rápida" data-bs-content="Clique para ver mais detalhes do curso.">
+    //     Detalhes
+    // </button>
+</script>
